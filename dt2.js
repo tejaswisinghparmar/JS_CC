@@ -23,7 +23,7 @@ let myObject={
 }// an Object
 
 const myFunction=function(){
-    console.log("Hello f*ck")
+    console.log("Hello f*cks")
 }
 
 console.log(typeof outsideTemp)
