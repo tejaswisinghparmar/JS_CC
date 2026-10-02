@@ -21,3 +21,5 @@ console.log(Number(false));
 
 //NaN is Not a number but when we checked NaN's datatype it said number so JS is not a good fucker;
 // Conversions can be done in many datatypes ie> Number, String, Boolean
+
+console.log(true,+true,Boolean(""),+"")
