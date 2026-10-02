@@ -33,3 +33,22 @@ console.log(typeof myObject)
 console.log(myFunction, typeof myFunction)
 myFunction()
 //
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//stack(primitive DT) , heap(non-primitive)
+
+let myGameName= "BLACK"
+
+let userOne ={
+    email: "user@google.com",
+    rno : 98789
+}
+
+let userTwo = userOne;
+
+userTwo.rno=767676
+
+console.log(userOne.rno,userTwo.rno)
