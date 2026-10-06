@@ -1,0 +1,496 @@
+\n\n==================== ./comparision.js ====================\n
+console.log(true*(2<-2));
+
+console.log(null >= 0)
+
+\n\n==================== ./datatypes.js ====================\n
+"use strict"; 
+//alert ("hello") ? error cuz using Node.js
+
+console.log( 5+9 ); 
+
+console.log("MAaybe")
+
+let age=99
+let name="tehas"
+let isLoggedIn = false
+let roll
+
+
+/*
+
+number 
+bigint
+string
+boolean
+null=standalone value
+symbol = unqiue
+
+object
+
+*/
+
+console.log(typeof age)
+console.log(roll)
+console.log(typeof roll)
+\n\n==================== ./dates.js ====================\n
+let myDate =new Date
+
+console.log(myDate.toString())
+console.log(myDate.toDateString())
+console.log(myDate.toLocaleString("en-IN"))
+
+console.log(typeof myDate) // Object
+
+let myCreatedDate= new Date(2008, 1, 20, 13, 34, 59)
+console.log(myCreatedDate.toLocaleString())
+
+let myCreatedDate1 = new Date("2005-02-22");
+console.log(myCreatedDate1.toDateString());
+
+// myCreatedDate.toLocaleString('default', {
+//     weekday: "long",
+//     timeZone: "IN"
+// })\n\n==================== ./dt2.js ====================\n
+//PRIMITIVE DATATYPES
+// 7 types: String, Bool, Number, null, undefined, symbol, BigInt
+
+//JavaScript is a dynamically typed language 
+
+
+const outsideTemp= null
+const id = Symbol('123')
+const a_id= Symbol('123')
+
+console.log(id === a_id)//asks if they are absolutly the same 
+console.log(id == a_id)//asks if they are same after type conversion
+
+//Non-Primitive (Reference )
+
+//array ,Objects ,Functions
+
+const cakes =["butterscotch", "red Velvet", "dark forest"]//array
+
+let myObject={
+    name: "BLACK",
+    rank: "Elder",
+}// an Object
+
+const myFunction=function(){
+    console.log("Hello f*cks")
+}
+
+console.log(typeof outsideTemp)
+console.log(typeof id)
+console.log(typeof cakes)
+console.log(typeof myObject)
+console.log(myFunction, typeof myFunction)
+myFunction()
+//
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//stack(primitive DT) , heap(non-primitive)
+
+let myGameName= "BLACK"
+
+let userOne ={
+    email: "user@google.com",
+    rno : 98789
+}
+
+let userTwo = userOne;
+
+userTwo.rno=767676
+
+console.log(userOne.rno,userTwo.rno)\n\n==================== ./JS2/array2.js ====================\n
+const marvel_heros=["Thor", "Ironman", "Spiderman"]
+const dc_heros=["Superman", "Flash", "Batman"]
+
+marvel_heros.push(...dc_heros)
+//console.log(marvel_heros)
+
+const all_heros= marvel_heros.concat(dc_heros)
+//console.log(all_heros)
+
+
+let all_new_heros=[...dc_heros,...marvel_heros]
+//console.log(all_new_heros)
+
+
+let test_array=[2,3,4,[4,4,5,6,7,[3,6,7,8,9]]]
+let Usable_array=test_array.flat(Infinity)
+//console.log(Usable_array)
+
+console.log(Array.isArray([3,4,"tsp"]))
+console.log(Array.isArray("TSP_from Kanpur"))
+console.log(Array.from("TSP_from Kanpur."))
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score2, score3))
+\n\n==================== ./JS2/array.js ====================\n
+// array
+
+const myArr = [0, 1, 2, 3, 4, 5]
+const myHeors = ["shaktiman", "naagraj"]
+
+const myArr2 = new Array(1, 2, 3, 4)
+// console.log(myArr[1]);
+
+// Array methods
+
+// myArr.push(6)
+// myArr.push(7)
+// myArr.pop()
+
+// myArr.unshift(9)
+// myArr.shift()
+
+// console.log(myArr.includes(9));
+// console.log(myArr.indexOf(3));
+
+// const newArr = myArr.join()
+
+// console.log(myArr);
+// console.log( newArr);
+
+
+// slice, splice
+
+console.log("A ", myArr);
+
+const myn1 = myArr.slice(1, 3)
+
+console.log(myn1);
+console.log("B ", myArr);
+
+
+const myn2 = myArr.splice(1, 3)
+console.log("C ", myArr);
+console.log(myn2);\n\n==================== ./JS2/fuctions.js ====================\n
+function addTwo(num1, num2){
+    return num1+num2
+}
+
+let result= addTwo(3,2)
+
+// console.log(result)
+// console.log(addTwo(8, 9))
+
+
+function loginUserMessage(Username="Guest "){
+    if(Username){
+        return `${Username} just logged in...`
+    }
+    else{
+        console.log("Please enter a Username: ")
+        console.log(loginUserMessage("Sirius"))
+        return 
+    }
+}
+
+console.log(loginUserMessage())
+
+
+const Obj22= {
+    username: "Black",
+    age: "31"
+}
+
+function userage(anyobject){
+    console.log(`${anyobject.username} is of ${anyobject.age} years.`)
+}
+
+userage({
+    username: "fuck",
+    age:"u"
+})
+console.log(userage(Obj22));
+\n\n==================== ./JS2/object2.js ====================\n
+const obj= {
+    name: "Parker",
+    stars: 4,
+    reviews: 7002,
+    price: 270,
+    MRP: 285,
+    Discount: 5,
+    "Deal of the day": true 
+};
+
+obj.color="Black";
+
+//console.table(obj)
+
+//console.log(obj.stars>4 ? "good" : "Not good") 
+
+const obj1={
+    1:'a',
+    2:'b',
+    3:'c'
+}
+const obj2={
+    4:'a',
+    5:'d',
+    6:'e'
+}
+
+const obj3={
+    ...obj1,
+    ...obj2
+}
+console.table(obj3)
+
+console.log(Object.keys(obj))
+console.log(Object.values(obj))
+console.log(Object.entries(obj))
+
+console.log(obj.hasOwnProperty('name'))
+
+const {"Deal of the day" : sale} =obj
+console.log(sale)
+
+\n\n==================== ./JS2/objects.js ====================\n
+let mySym= Symbol("key22")
+
+
+const JsUser1={
+    name: "Black",
+    "full Name": "Sirius Black",
+    [mySym]: "let it be",
+    age: 32,
+    location: "Hogwartz",
+    email: "buckbeak@email.service",
+    isLoggedIn: true,
+    lastLoginDay: ["Monday","Friday"]
+}
+
+//console.log(JsUser1.email)
+//console.log(JsUser1["email"])
+//console.log(JsUser1["full Name"],JsUser1["location"])
+//console.log(typeof JsUser1[mySym])
+
+JsUser1["full Name"]= "padfoot"
+//Object.freeze(JsUser1)
+JsUser1["full Name"]= "padfoot_lunarWolf"
+
+//console.log(JsUser1)
+
+JsUser1.greeting= function(){
+    console.log("Hola, los siento Wilson")
+}
+JsUser1.greetingTwo= function(){
+    console.log(`Hola, los siento ${this.name}`)
+}
+
+console.log(JsUser1.greeting())
+console.log(JsUser1.greetingTwo())\n\n==================== ./JS2/tempCodeRunnerFile.js ====================\n
+name\n\n==================== ./JS3/arrays.js ====================\n
+const user ={
+    product: "black_pen",
+    price: 199,
+
+    welcomeMesasge: function(){
+        console.log(`${this.product} is of ${this.price} Rupees.`)
+    }
+}
+
+function that(){
+    let changew =1
+    console.log(this.changew)
+}
+
+// that()
+// user.welcomeMesasge()
+
+const maggi =() => {
+    let time = 2
+
+    console.log(this)
+}
+maggi()\n\n==================== ./JS3/arrow_fucn.js ====================\n
+const addTwo = (num1,num2) => {
+    return num1+num2
+}
+
+// console.log(addTwo(5,90))
+
+
+// const AddTwo =(num1,num2) => {
+//     console.log(num1+num2)
+//     return AddTwo(num1+num2,num1)
+// }
+
+// AddTwo(2,3)
+
+const newFUN = (new1,new2) =>  new1*new2
+
+console.log(newFUN(4,8))
+
+let obj= {
+    name: "tejaswi",
+
+    saymyname: function(){
+        console.log(this.name)
+    },
+
+    saymyname2:  () => console.log(this.name)
+}
+
+obj.saymyname()
+obj.saymyname2()\n\n==================== ./JS3/IIFE.js ====================\n
+//majorly used for Database initialisation
+
+(function IIFE(){
+    //named IIFE
+    console.log("Syntax")
+}) ();
+
+((name)=>{
+    //unnamed IIFE arrow function
+    console.log(`${name}Connected`)
+    }) ("WiFi ");
+
+
+
+
+
+\n\n==================== ./maths.js ====================\n
+const score=100;
+// console.log(score,typeof(score));
+
+const balance = new Number(1000);
+// console.log(balance)
+
+// console.log(balance.toString(),balance.toString().length);
+// console.log(balance.toFixed(3))
+
+let otherNumber=22/7
+// console.log(otherNumber.toFixed(10))
+
+const thirdNumber= 10000000
+// console.log(thirdNumber.toLocaleString('en-IN'));
+
+let max=100
+let min=10
+console.log(
+    Math.floor(Math.random() * (max - min + 1)) + min
+);\n\n==================== ./string.js ====================\n
+console.log("tsp" === 'tsp')
+
+let score =100
+let nane= "Sirius"
+console.log(`The name of the player is ${nane} and the score is ${score}`)
+
+
+let gameName = new String('SiriusBlack');
+
+console.log(gameName[0]);              // S
+console.log(gameName[-1]);             // undefined
+console.log(gameName.at(-1));
+console.log(gameName.toUpperCase());   // SIRIUSBLACK
+console.log(gameName);                 // SiriusBlack
+
+// Length
+console.log(gameName.length);          // 11
+
+// Character access
+console.log(gameName.charAt(0));       // S
+console.log(gameName.charAt(5));       // s
+console.log(gameName.charAt(gameName.length - 1)); // k
+
+// Finding characters
+console.log(gameName.indexOf('S'));     // 0
+console.log(gameName.indexOf('Black')); // 6
+console.log(gameName.lastIndexOf('i')); // 3
+
+// Checking contents
+console.log(gameName.includes('Sirius')); // true
+console.log(gameName.includes('Harry'));  // false
+console.log(gameName.startsWith('Sirius')); // true
+console.log(gameName.endsWith('Black'));    // true
+
+// Changing case
+console.log(gameName.toUpperCase()); // SIRIUSBLACK
+console.log(gameName.toLowerCase()); // siriusblack
+
+// Extracting parts
+console.log(gameName.slice(0, 6));    // Sirius
+console.log(gameName.slice(6));       // Black
+console.log(gameName.slice(-5));      // Black
+console.log(gameName.substring(0, 6)); // Sirius
+
+// Replacing
+console.log(gameName.replace('Black', 'Potter'));
+console.log(gameName.replaceAll('i', 'I'));
+
+// Splitting
+console.log(gameName.split(''));      // each character
+console.log(gameName.split('Black')); // ["Sirius", ""]
+
+// Removing whitespace
+let name = new String('   SiriusBlack   ');
+console.log(name.trim());
+console.log(name.trimStart());
+console.log(name.trimEnd());
+
+// Repeating
+console.log(gameName.repeat(2));
+
+// Concatenation
+console.log(gameName.concat(' Potter'));
+
+// Checking position
+console.log(gameName.charCodeAt(0));
+
+// Comparing
+console.log(gameName === 'SiriusBlack'); // false
+console.log(gameName == 'SiriusBlack');  // true\n\n==================== ./tempCodeRunnerFile.js ====================\n
+console.log(userOne.rno,userTwo.rno)\n\n==================== ./test.js ====================\n
+console.log("Hello from Tsp")\n\n==================== ./typeConversion.js ====================\n
+let score =22
+let R_name= "2345str"
+// console.log(typeof score);
+// console.log(typeof(score));
+
+let R_nameInNumber=Number(R_name)
+let valueInString = String(score);
+
+console.log(typeof score, score);
+console.log(typeof R_name, R_name);
+console.log(typeof R_nameInNumber, R_nameInNumber);
+console.log(typeof valueInString, valueInString);
+console.log(Number("22"));
+console.log(Number("22abc"));
+console.log(Number(""));
+console.log(Number(" "));
+console.log(Number(null));
+console.log(Number(undefined));
+console.log(Number(true));
+console.log(Number(false));
+
+//NaN is Not a number but when we checked NaN's datatype it said number so JS is not a good fucker;
+// Conversions can be done in many datatypes ie> Number, String, Boolean
+
+console.log(true,+true,Boolean(""),+"")\n\n==================== ./variables.js ====================\n
+const accID =14352
+let email ="tes@gmail.com"
+var accPass = "32453"
+accCity ="jaipur"
+let accState
+
+// accID =3
+
+/*
+do Not use Var
+*/
+email ="sabhdash"
+accPass=3247
+console.log(accID)
+
+console.table([accID, accPass, email, accCity, accState])
+
